@@ -14,4 +14,4 @@ Project is created with:
 * Black 22.1.0
 
 ## Minimax
-Minimax is a AI applied in two player games (checkers, tic-tac-toe, chess etc.). In this game the implementation is based on [GeeksforGeeks minimax tutorial](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/
+Minimax is a AI applied in two player games (checkers, tic-tac-toe, chess etc.). In this game the implementation is based on [GeeksforGeeks minimax tutorial](https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/).
