@@ -47,6 +47,7 @@ def evaluate(board):
     columns = [7, 8, 9]
 
     for row in rows:
+        # Checks every row for the best move
         if board[row] == board[row + 1] and board[row + 1] == board[row + 2]:
             if board[row] == "X":
                 return 10
@@ -54,6 +55,7 @@ def evaluate(board):
                 return -10
 
     for col in columns:
+        # Checks every column for the best move
         if board[col] == board[col - 3] and board[col - 3] == board[col - 6]:
             if board[col] == "X":
                 return 10
@@ -61,12 +63,14 @@ def evaluate(board):
                 return -10
 
     if board[1] == board[5] and board[5] == board[9]:
+        # Checks first diagonal for the best move
         if board[1] == "X":
             return 10
         elif board[1] == "O":
             return -10
 
     if board[3] == board[5] and board[5] == board[7]:
+        # Checks second diagonal for the best move
         if board[3] == "X":
             return 10
         elif board[3] == "O":
@@ -76,6 +80,7 @@ def evaluate(board):
 
 
 def minimax(board, depth, is_max):
+    # Minimax algorithm implementation
     score = evaluate(board)
 
     if score == 10 or score == -10:
@@ -105,6 +110,7 @@ def minimax(board, depth, is_max):
 
 
 def find_best_move(board):
+    # Finds the best move
     best_val = -1000
     best_move = -1
 
@@ -117,8 +123,6 @@ def find_best_move(board):
             if move_val > best_val:
                 best_move = i
                 best_val = move_val
-    print("The value of the best move is: ", best_val)
-    print()
     return best_move
 
 
